@@ -10,6 +10,8 @@ namespace FrackedCatswin8Store
     {
         GraphicsDeviceManager _graphics;
         SpriteBatch _spriteBatch;
+        Texture2D catBlack;
+        Rectangle catBlackRect;
 
         public Game1()
         {
@@ -38,7 +40,8 @@ namespace FrackedCatswin8Store
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            catBlack = Content.Load<Texture2D>(@"graphics\cathead");
+            catBlackRect = new Rectangle(0, 0, catBlack.Width, catBlack.Height);
             // TODO: use this.Content to load your game content here
         }
 
@@ -71,8 +74,14 @@ namespace FrackedCatswin8Store
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            // TODO: Add your drawing code here 
+            _spriteBatch.Begin();
 
+            _spriteBatch.Draw(catBlack, catBlackRect, Color.White);
+
+
+
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }

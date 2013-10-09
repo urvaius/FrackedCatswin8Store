@@ -135,7 +135,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="Content\cathead.xnb">
+    <Content Include="Content\Graphics\cathead.xnb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="FrackedCatswin8Store_TemporaryKey.pfx" />
